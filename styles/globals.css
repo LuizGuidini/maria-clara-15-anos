@@ -1,42 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --marrom: #5D4037;
+  --branco: #FFFFFF;
+  --preto: #000000;
+  --amarelo-terra: #faedcd;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: var(--branco);
+  color: var(--preto);
+  line-height: 1.6;
 }
 
-a {
-  color: inherit;
+/* Navbar global (se não usar Navbar.module.css) */
+nav {
+  background-color: var(--marrom);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 10px;
+  color: var(--branco);
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+nav a:hover {
+  color: var(--amarelo-terra);
+}
+
+/* Responsividade Navbar */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+  nav a {
+    margin: 8px 0;
+  }
+}
+
+/* Títulos e textos */
+h1, h2, p {
+  text-align: center;
+  color: var(--marrom);
+  margin-bottom: 15px;
+  font: 'Great Vibes', cursive;
+}
+
+/* Botões */
+button {
+  background-color: var(--amarelo-terra);
+  color: var(--preto);
+  border: none;
+  padding: 12px 18px;
+  margin: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--marrom);
+  color: var(--branco);
+  transform: scale(1.05);
+}
+
+/* Galeria */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galeria-item {
+  background-color: var(--amarelo-terra);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Quiz */
+.quiz-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.quiz-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--marrom);
+}
+
+.quiz-container button {
+  background-color: var(--amarelo-terra);
+  color: var(--preto);
+  border: none;
+  padding: 12px 18px;
+  margin: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.quiz-container button:hover {
+  background-color: var(--marrom);
+  color: var(--branco);
+  transform: scale(1.05);
+}
+
+.resultado {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--marrom);
 }
