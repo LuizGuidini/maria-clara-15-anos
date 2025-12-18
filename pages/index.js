@@ -49,7 +49,7 @@ export default function Home() {
 
       <div style={{ maxWidth: "800px", margin: "20px auto", textAlign: "center" }}>
         <Image
-          src="/fotoPrincipal.jpeg"
+          src="/FotoPrincipal.jpeg"
           alt="Festa de 15 anos"
           width={400}
           height={480}
