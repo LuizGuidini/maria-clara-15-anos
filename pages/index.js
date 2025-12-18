@@ -21,7 +21,7 @@ export default function Home() {
         {/* Botão de confirmação de presença */}
         <div style={{ marginTop: "25px" }}>
           <Link
-            href="https://confirmarpresenca.com/e/jqw75jkd"
+            href={process.env.NEXT_PUBLIC_CONFIRM_URL || "https://confirmarpresenca.com/e/jqw75jkd"}
             target="_blank"
             rel="noopener noreferrer"
           >

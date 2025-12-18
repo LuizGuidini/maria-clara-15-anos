@@ -21,7 +21,7 @@ export default function Navbar() {
         <Link href="/recados" className={styles.link}>Recados</Link>
         <Link href="/quiz" className={styles.link}>Quiz</Link>
         <Link 
-          href="https://confirmarpresenca.com/e/jqw75jkd" 
+          href={process.env.NEXT_PUBLIC_CONFIRM_URL || "https://confirmarpresenca.com/e/jqw75jkd"} 
           className={styles.link}
           target="_blank" rel="noopener noreferrer"
         >
